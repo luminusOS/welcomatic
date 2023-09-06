@@ -1,0 +1,4 @@
+data/org.luminus.Welcomatic.desktop.in
+data/org.luminus.Welcomatic.appdata.xml.in
+data/org.luminus.Welcomatic.gschema.xml
+src/window.ui

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=welcomatic
+Exec=welcomatic
+Icon=org.luminus.Welcomatic
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
