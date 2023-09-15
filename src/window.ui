@@ -29,37 +29,74 @@
           </object>
         </child>
         <child>
-          <object class="AdwToastOverlay" id="toasts">
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="valign">3</property>
+            <property name="halign">3</property>
             <child>
-              <object class="AdwCarousel" id="carousel">
-                <property name="vexpand">True</property>
-                <property name="hexpand">True</property>
-                <property name="allow_scroll_wheel">False</property>
-                <property name="allow_mouse_drag">False</property>
-                <property name="allow_long_swipes">False</property>
+              <object class="GtkImage">
+                <property name="name">logo</property>
+                <property name="icon-name">org.luminus.Welcomatic</property>
+                <property name="pixel-size">172</property>
+                <property name="margin-bottom">30</property>
+                <style>
+                  <class name="icon-dropshadow"/>
+                </style>
               </object>
             </child>
-          </object>
-          <!-- <object class="GtkImage"> -->
-          <!--   <property name="resource">Welcome!</property> -->
-          <!--   <property name="vexpand">true</property> -->
-          <!--   <style> -->
-          <!--     <class name="title-1"/> -->
-          <!--   </style> -->
-          <!-- </object> -->
-
-          <object class="GtkLabel" id="label">
-            <property name="label">Welcome!</property>
-            <property name="vexpand">true</property>
-            <style>
-              <class name="title-1"/>
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="text">
-            <property name="label">Welcome!</property>
-            <property name="vexpand">true</property>
+            <child>
+              <object class="AdwToastOverlay" id="toasts">
+                <child>
+                  <object class="AdwCarousel" id="carousel">
+                    <property name="vexpand">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="allow_scroll_wheel">False</property>
+                    <property name="allow_mouse_drag">False</property>
+                    <property name="allow_long_swipes">False</property>
+                  </object>
+                </child>
+              </object>
+              <object class="GtkLabel" id="label">
+                <property name="label">Welcome to Luminus OS!</property>
+                <property name="vexpand">true</property>
+                <property name="margin-bottom">10</property>
+                <style>
+                  <class name="title-1"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="subtitle">
+                <property name="orientation">1</property>
+                <property name="halign">3</property>
+                <property name="margin-bottom">30</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Keep moving forward. Completely beginner friendly,
+easy to use, and powerful.</property>
+                    <property name="justify">2</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">1</property>
+                <property name="homogeneous">true</property>
+                <property name="halign">3</property>
+                <child>
+                  <object class="GtkButton" id="btn_start">
+                    <property name="label" translatable="yes">Let's start</property>
+                    <property name="halign">center</property>
+                    <property name="visible">True</property>
+                    <style>
+                      <class name="pill"/>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
         </child>
       </object>

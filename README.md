@@ -6,7 +6,7 @@
     system to their needs, e.g. by configuring snap, flatpak, flathub, etc.</p>
     <hr />
     <br />
-    <img src="data/screenshot-1.png">
+    <img src="data/images/screenshot-1.png">
 </div>
 
 

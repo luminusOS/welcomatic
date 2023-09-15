@@ -27,7 +27,8 @@ use self::window::WelcomaticWindow;
 
 use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};
-use gtk::{gio, glib};
+use gtk::{gio, glib, CssProvider};
+use gtk::gdk::{Display};
 use gtk::prelude::*;
 
 fn main() -> glib::ExitCode {
@@ -51,5 +52,19 @@ fn main() -> glib::ExitCode {
     // exits. Upon return, we have our exit code to return to the shell. (This
     // is the code you see when you do `echo $?` after running a command in a
     // terminal.
+    app.connect_startup(|_| load_css());
     app.run()
+}
+
+fn load_css() {
+    // Load the CSS file and add it to the provider
+    let provider = CssProvider::new();
+    provider.load_from_resource("/org/luminus/Welcomatic/style.css");
+
+    // Add the provider to the default screen
+    gtk::style_context_add_provider_for_display(
+        &Display::default().expect("Could not connect to a display."),
+        &provider,
+        gtk::STYLE_PROVIDER_PRIORITY_APPLICATION,
+    );
 }

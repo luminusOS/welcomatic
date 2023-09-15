@@ -1,0 +1,9 @@
+/home/leandromqrs/Projects/welcomatic/target/debug/deps/libgtk4_macros-4449c6f320b98cb9.so: /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/lib.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/attribute_parser.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/composite_template_derive.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/template_callbacks_attribute.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/util.rs
+
+/home/leandromqrs/Projects/welcomatic/target/debug/deps/gtk4_macros-4449c6f320b98cb9.d: /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/lib.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/attribute_parser.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/composite_template_derive.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/template_callbacks_attribute.rs /home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/util.rs
+
+/home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/lib.rs:
+/home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/attribute_parser.rs:
+/home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/composite_template_derive.rs:
+/home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/template_callbacks_attribute.rs:
+/home/leandromqrs/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gtk4-macros-0.6.6/src/util.rs:

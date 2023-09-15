@@ -38,6 +38,8 @@ mod imp {
         #[template_child]
         pub btn_back: TemplateChild<gtk::Button>,
         #[template_child]
+        pub btn_start: TemplateChild<gtk::Button>,
+        #[template_child]
         pub label: TemplateChild<gtk::Label>,
     }
 
