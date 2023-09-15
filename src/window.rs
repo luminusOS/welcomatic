@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use gtk::prelude::*;
+// use gtk::prelude::*;
 use adw::subclass::prelude::*;
 use gtk::{gio, glib};
 
@@ -30,7 +30,13 @@ mod imp {
     pub struct WelcomaticWindow {
         // Template widgets
         #[template_child]
-        pub header_bar: TemplateChild<gtk::HeaderBar>,
+        pub header_bar: TemplateChild<adw::HeaderBar>,
+        #[template_child]
+        pub carousel: TemplateChild<adw::Carousel>,
+        #[template_child]
+        pub carousel_indicator_dots: TemplateChild<adw::CarouselIndicatorDots>,
+        #[template_child]
+        pub btn_back: TemplateChild<gtk::Button>,
         #[template_child]
         pub label: TemplateChild<gtk::Label>,
     }
