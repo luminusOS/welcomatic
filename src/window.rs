@@ -26,7 +26,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, gtk::CompositeTemplate)]
-    #[template(resource = "/org/luminus/Welcomatic/window.ui")]
+    #[template(resource = "/org/luminus/Welcomatic/ui/window.ui")]
     pub struct WelcomaticWindow {
         // Template widgets
         #[template_child]

@@ -1,3 +1,13 @@
+pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
+gnome = import('gnome')
+
+gnome.compile_resources('welcomatic',
+  'welcomatic.gresource.xml',
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+)
+
 desktop_file = i18n.merge_file(
         input: 'org.luminus.Welcomatic.desktop.in',
        output: 'org.luminus.Welcomatic.desktop',
