@@ -26,8 +26,8 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, gtk::CompositeTemplate)]
-    #[template(resource = "/org/luminus/Welcomatic/ui/window.ui")]
-    pub struct WelcomaticWindow {
+    #[template(resource = "/org/luminus/Welcomatic/ui/welcome.ui")]
+    pub struct WelcomaticWelcome {
         // Template widgets
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
@@ -40,10 +40,10 @@ mod imp {
     }
 
     #[glib::object_subclass]
-    impl ObjectSubclass for WelcomaticWindow {
-        const NAME: &'static str = "WelcomaticWindow";
-        type Type = super::WelcomaticWindow;
-        type ParentType = adw::ApplicationWindow;
+    impl ObjectSubclass for WelcomaticWelcome {
+        const NAME: &'static str = "WelcomaticWelcome";
+        type Type = super::WelcomaticWelcome;
+        type ParentType = adw::Bin;
 
         fn class_init(klass: &mut Self::Class) {
             klass.bind_template();
@@ -54,18 +54,15 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for WelcomaticWindow {
-        fn constructed(&self) {
-        }
-    }
-    impl WidgetImpl for WelcomaticWindow {}
-    impl WindowImpl for WelcomaticWindow {}
-    impl ApplicationWindowImpl for WelcomaticWindow {}
-    impl AdwApplicationWindowImpl for WelcomaticWindow {}
+    impl ObjectImpl for WelcomaticWelcome {}
+    impl WidgetImpl for WelcomaticWelcome {}
+    impl WindowImpl for WelcomaticWelcome {}
+    impl ApplicationWindowImpl for WelcomaticWelcome {}
+    impl AdwApplicationWindowImpl for WelcomaticWelcome {}
 }
 
 glib::wrapper! {
-    pub struct WelcomaticWindow(ObjectSubclass<imp::WelcomaticWindow>)
+    pub struct WelcomaticWelcome(ObjectSubclass<imp::WelcomaticWelcome>)
         @extends gtk::Widget, gtk::Window, gtk::ApplicationWindow, adw::ApplicationWindow,        @implements gio::ActionGroup, gio::ActionMap;
 }
 
