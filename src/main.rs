@@ -21,6 +21,7 @@
 mod application;
 mod config;
 mod window;
+mod screens;
 
 use self::application::WelcomaticApplication;
 use self::window::WelcomaticWindow;

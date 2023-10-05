@@ -22,6 +22,8 @@
 use adw::subclass::prelude::*;
 use gtk::{gio, glib};
 
+use crate::screens::welcome::WelcomaticWelcome;
+
 mod imp {
     use super::*;
 
@@ -55,6 +57,8 @@ mod imp {
     }
 
     impl ObjectImpl for WelcomaticWindow {
+        let welcome_screen = WelcomaticWelcome::new();
+
         fn constructed(&self) {
         }
     }
