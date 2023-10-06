@@ -7,33 +7,58 @@
         <property name="valign">fill</property>
         <property name="hexpand">true</property>
         <child>
-            <object class="AdwStatusPage" id="status_page">
-                <property name="icon-name">org.luminus.Welcomatic</property>
-                <property name="title" translatable="yes">Welcome!</property>
-                <property name="description" translatable="yes">Make your choices, this wizard will take care of everything.</property>
+            <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">3</property>
+                <property name="halign">3</property>
+                <child>
+                    <object class="GtkImage">
+                        <property name="name">logo</property>
+                        <property name="icon-name">org.luminus.Welcomatic</property>
+                        <property name="pixel-size">172</property>
+                        <property name="margin-bottom">30</property>
+                        <style>
+                            <class name="icon-dropshadow"/>
+                        </style>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkLabel">
+                        <property name="label">Welcome to Luminus OS!</property>
+                        <property name="vexpand">true</property>
+                        <property name="margin-bottom">10</property>
+                        <style>
+                            <class name="title-1"/>
+                        </style>
+                    </object>
+                </child>
                 <child>
                     <object class="GtkBox">
-                        <property name="spacing">8</property>
-                        <property name="halign">center</property>
+                        <property name="orientation">1</property>
+                        <property name="halign">3</property>
+                        <property name="margin-bottom">30</property>
                         <child>
-                            <object class="GtkButton" id="btn_advanced">
-                                <property name="label">Advanced</property>
-                                <property name="halign">center</property>
-                                <style>
-                                    <class name="pill" />
-                                </style>
+                            <object class="GtkLabel">
+                                <property name="label">Keep moving forward. Completely beginner friendly,
+easy to use, and powerful.</property>
+                                <property name="justify">2</property>
                             </object>
-
-
-
                         </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkBox">
+                        <property name="orientation">1</property>
+                        <property name="homogeneous">true</property>
+                        <property name="halign">3</property>
                         <child>
-                            <object class="GtkButton" id="btn_next">
-                                <property name="label">Start</property>
+                            <object class="GtkButton" id="btn_start">
+                                <property name="label" translatable="yes">Let's start</property>
                                 <property name="halign">center</property>
+                                <property name="visible">True</property>
                                 <style>
-                                    <class name="pill" />
-                                    <class name="suggested-action" />
+                                    <class name="pill"/>
+                                    <class name="suggested-action"/>
                                 </style>
                             </object>
                         </child>

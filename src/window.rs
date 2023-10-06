@@ -30,7 +30,6 @@ mod imp {
     #[derive(Debug, Default, gtk::CompositeTemplate)]
     #[template(resource = "/org/luminus/Welcomatic/ui/window.ui")]
     pub struct WelcomaticWindow {
-        // Template widgets
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
         #[template_child]
@@ -57,9 +56,10 @@ mod imp {
     }
 
     impl ObjectImpl for WelcomaticWindow {
-        let welcome_screen = WelcomaticWelcome::new();
 
         fn constructed(&self) {
+            let welcome_screen = WelcomaticWelcome::new();
+            self.carousel.append(&welcome_screen);
         }
     }
     impl WidgetImpl for WelcomaticWindow {}

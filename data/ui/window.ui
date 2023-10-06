@@ -24,7 +24,7 @@
               <object class="GtkButton" id="btn_back">
                 <property name="label" translatable="yes">Back</property>
                 <property name="halign">center</property>
-                <property name="visible">True</property>
+                <property name="visible">False</property>
               </object>
             </child>
           </object>

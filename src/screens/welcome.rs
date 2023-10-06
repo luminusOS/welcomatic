@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-// use gtk::prelude::*;
+use gtk::subclass::prelude::*;
 use adw::subclass::prelude::*;
 use gtk::{gio, glib};
 
@@ -28,15 +28,8 @@ mod imp {
     #[derive(Debug, Default, gtk::CompositeTemplate)]
     #[template(resource = "/org/luminus/Welcomatic/ui/welcome.ui")]
     pub struct WelcomaticWelcome {
-        // Template widgets
         #[template_child]
-        pub header_bar: TemplateChild<adw::HeaderBar>,
-        #[template_child]
-        pub carousel: TemplateChild<adw::Carousel>,
-        #[template_child]
-        pub carousel_indicator_dots: TemplateChild<adw::CarouselIndicatorDots>,
-        #[template_child]
-        pub btn_back: TemplateChild<gtk::Button>,
+        pub btn_start: TemplateChild<gtk::Button>,
     }
 
     #[glib::object_subclass]
@@ -56,20 +49,17 @@ mod imp {
 
     impl ObjectImpl for WelcomaticWelcome {}
     impl WidgetImpl for WelcomaticWelcome {}
-    impl WindowImpl for WelcomaticWelcome {}
-    impl ApplicationWindowImpl for WelcomaticWelcome {}
-    impl AdwApplicationWindowImpl for WelcomaticWelcome {}
+    impl BinImpl for WelcomaticWelcome {}
 }
 
 glib::wrapper! {
     pub struct WelcomaticWelcome(ObjectSubclass<imp::WelcomaticWelcome>)
-        @extends gtk::Widget, gtk::Window, gtk::ApplicationWindow, adw::ApplicationWindow,        @implements gio::ActionGroup, gio::ActionMap;
+        @extends gtk::Widget, adw::Bin,
+        @implements gio::ActionGroup, gio::ActionMap;
 }
 
-impl WelcomaticWindow {
-    pub fn new<P: glib::IsA<gtk::Application>>(application: &P) -> Self {
-        glib::Object::builder()
-            .property("application", application)
-            .build()
+impl WelcomaticWelcome {
+    pub fn new() -> Self {
+        glib::Object::new::<Self>()
     }
 }
