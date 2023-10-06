@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/org/luminus/Welcomatic">
     <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/welcome.ui</file>
     <file compressed="true">org.luminus.Welcomatic.style.css</file>
   </gresource>
 </gresources>
